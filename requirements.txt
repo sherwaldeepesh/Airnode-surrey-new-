@@ -4,5 +4,6 @@ streamlit
 seaborn
 requests
 statsmodels
+scikit-learn
 git+https://github.com/giswqs/leafmap
 git+https://github.com/giswqs/geemap
