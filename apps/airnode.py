@@ -31,7 +31,7 @@ def app():
     #     "Test 1"
     # )
 
-    data = r"D:\iTek-workshop\leafmap-apps\data_details\india_details.csv"
+    data = r"data_details\india_details.csv"
 
     df = pd.read_csv(data)
 
