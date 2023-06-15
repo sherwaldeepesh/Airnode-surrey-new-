@@ -1,1 +1,5 @@
-hi
+-Create a file Named Data and add another file named AQI.
+-Download and Paste the CSV files from the "Data" folder inside AQI folder
+-Run the dataX, Plot_AQI_dataY, Extract_combine in the given order.
+-Run "model"
+-Run the app1.py file by using the .pkl files (line 10) created by "model"
