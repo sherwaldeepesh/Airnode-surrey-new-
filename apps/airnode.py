@@ -39,11 +39,12 @@ def app():
 
     selected_location = st.selectbox("Select Location", df['location'])
 
-    m = leafmap.Map(tiles = 'cartodbpositron')
+    m = leafmap.Map(tiles = 'cartodbpositron',zoom_start=20, control_scale=True)
 
     df_updated = df[df['location'] == selected_location]
     
-    m.add_circle_markers_from_xy(df_updated, x="longitude", y="latitude", radius=10, color="blue", fill_color="black",zoom_start=1, control_scale=True)
+    m.add_circle_markers_from_xy(df_updated, x="longitude", y="latitude", radius=10, color="blue", fill_color="black")
+    m.set_center(df_updated['latitude'].values , df_updated['longitude'].values, zoom=10)
     m.to_streamlit(width=700, height=500)
 
     location_id_ = int(df_updated['location_id'].values[0])
