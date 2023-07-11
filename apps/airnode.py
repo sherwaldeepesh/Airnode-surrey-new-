@@ -43,7 +43,7 @@ def app():
 
     df_updated = df[df['location'] == selected_location]
     
-    m.add_circle_markers_from_xy(df_updated, x="longitude", y="latitude", radius=10, color="blue", fill_color="black",zoom_start=14, control_scale=True)
+    m.add_circle_markers_from_xy(df_updated, x="longitude", y="latitude", radius=10, color="blue", fill_color="black",zoom_start=1, control_scale=True)
     m.to_streamlit(width=700, height=500)
 
     location_id_ = int(df_updated['location_id'].values[0])
