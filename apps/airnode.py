@@ -39,7 +39,7 @@ def app():
 
     selected_location = st.selectbox("Select Location", df['location'])
 
-    m = leafmap.Map(tiles = 'cartodbpositron',zoom_start=20, control_scale=True)
+    m = leafmap.Map(tiles = 'cartodbpositron', control_scale=True)
 
     df_updated = df[df['location'] == selected_location]
     
