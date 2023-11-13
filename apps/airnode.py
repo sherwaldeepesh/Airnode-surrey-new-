@@ -61,10 +61,10 @@ def app():
         return return_dict
 
 
-    date_start = str(datetime.now().date()-timedelta(days=31))
-    # date_start = '2023-10-13'
-    date_end = str(datetime.now().date()-timedelta(days=1))
-    # date_end = '2023-11-12'
+    # date_start = str(datetime.now().date()-timedelta(days=31))
+    date_start = '2023-10-13'
+    # date_end = str(datetime.now().date()-timedelta(days=1))
+    date_end = '2023-11-12'
 
     data_list = get_data_by_location(l_id = location_id_, date_from = date_start, date_to = date_end)
 
