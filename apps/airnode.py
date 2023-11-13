@@ -61,8 +61,8 @@ def app():
         return return_dict
 
 
-    date_start = str(datetime.now().date())
-    date_end = str(datetime.now().date()+timedelta(days=30))
+    date_start = str(datetime.now().date()-timedelta(days=30))
+    date_end = str(datetime.now().date())
 
     data_list = get_data_by_location(l_id = location_id_, date_from = date_start, date_to = date_end)
 
