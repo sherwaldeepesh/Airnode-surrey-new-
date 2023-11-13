@@ -49,7 +49,7 @@ def app():
 
     location_id_ = int(df_updated['location_id'].values[0])
     print(location_id_)
-    def get_data_by_location(l_id = 8039, date_from = '2023-02-21', date_to = '2023-02-25'):
+    def get_data_by_location(l_id = 8039, date_from = '2023-02-21', date_to = '2023-02-31'):
         return_dict = []
         url = f"https://api.openaq.org/v2/measurements?location_id={l_id}&parameter=pm25&date_from={date_from}&date_to={date_to}&limit=20000"
         headers = {"accept": "application/json"}
@@ -62,9 +62,9 @@ def app():
 
 
     # date_start = str(datetime.now().date()-timedelta(days=31))
-    date_start = '2023-05-13'
+    date_start = '2023-04-01'
     # date_end = str(datetime.now().date()-timedelta(days=1))
-    date_end = '2023-06-12'
+    date_end = '2023-05-31'
 
     data_list = get_data_by_location(l_id = location_id_, date_from = date_start, date_to = date_end)
 
