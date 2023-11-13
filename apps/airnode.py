@@ -15,7 +15,7 @@ def app():
     import matplotlib.pyplot as plt
     import seaborn as sns
     # import sm as sm
-    from datetime import datetime
+    from datetime import datetime, timedelta
     from statsmodels.tsa.arima_model import ARIMA
     import statsmodels.api as sm
     from sklearn.metrics import mean_squared_error
@@ -61,8 +61,8 @@ def app():
         return return_dict
 
 
-    date_start = '2023-04-01'
-    date_end = '2023-05-31'
+    date_start = str(datetime.now().date())
+    date_end = str(datetime.now().date()+timedelta(days=30))
 
     data_list = get_data_by_location(l_id = location_id_, date_from = date_start, date_to = date_end)
 
