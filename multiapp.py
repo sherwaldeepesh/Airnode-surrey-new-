@@ -58,7 +58,7 @@ class MultiApp:
 
         # app_state["page"] = st.session_state.radio
         # st.write('after', app_state)
-
+        app_state = dict(st.query_params)
         st.query_params.update(app_state)
         # st.experimental_set_query_params(**st.session_state.to_dict())
         functions[titles.index(title)]()
